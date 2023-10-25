@@ -6,5 +6,10 @@
 
     <!--配置UserServiceImpl-->
     <bean id="userService" class="com.zhengsongjun.spring.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"></property>
+    </bean>
+
+
+    <bean id="userDao" class="com.zhengsongjun.spring.impl.UserDaoImpl">
     </bean>
 </beans>
