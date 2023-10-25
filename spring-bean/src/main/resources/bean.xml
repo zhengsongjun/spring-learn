@@ -6,10 +6,16 @@
 
     <!--配置UserServiceImpl-->
     <bean id="userService" class="com.zhengsongjun.spring.impl.UserServiceImpl">
-        <property name="userDao" ref="userDao"></property>
+        <constructor-arg name="name" value="jerry" />
+        <property name="userDao" ref="userDao"/>
     </bean>
 
 
-    <bean id="userDao" class="com.zhengsongjun.spring.impl.UserDaoImpl">
+<!--    <bean id="userDao" class="com.zhengsongjun.spring.impl.UserDaoImpl">-->
+<!--    </bean>-->
+
+    <bean id="userDao"  class="com.zhengsongjun.spring.impl.UserDaoImpl">
+        <constructor-arg name="name" value="tom">
+        </constructor-arg>
     </bean>
 </beans>
