@@ -13,5 +13,6 @@ public class MyBeanFactory {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");;
         UserDao userDao = applicationContext.getBean("userDao", UserDao.class);
         UserService userService = applicationContext.getBean("userService", UserService.class);;
+
     }
 }
