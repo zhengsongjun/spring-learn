@@ -4,6 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+
+    <!--通过工厂静态方法获取UserDaoImpl-->
+    <bean id="factoryUserDao" class="com.zhengsongjun.factory.MyBeanFactory" factory-method="getUserDao" />
+
     <!--配置UserServiceImpl-->
     <bean id="userService" class="com.zhengsongjun.spring.impl.UserServiceImpl">
         <constructor-arg name="name" value="jerry" />

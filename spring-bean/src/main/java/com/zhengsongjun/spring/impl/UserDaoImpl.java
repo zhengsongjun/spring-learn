@@ -12,4 +12,6 @@ public class UserDaoImpl implements UserDao  {
         System.out.println("有参构造，名称是"+name);
     }
 
+
+
 }
