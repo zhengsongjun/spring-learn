@@ -9,5 +9,8 @@ public class MyBeanFactoryTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("bean.xml");
         Object factoryUserDao = applicationContext.getBean("factoryUserDao");
         System.out.println(factoryUserDao);
+
+
+        Object factoryObjectUserDao = applicationContext.getBean("factoryGetBean");
     }
 }

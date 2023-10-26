@@ -7,6 +7,10 @@
 
     <!--通过工厂静态方法获取UserDaoImpl-->
     <bean id="factoryUserDao" class="com.zhengsongjun.factory.MyBeanFactory" factory-method="getUserDao" />
+    <!--通过工厂的对象方法获取UserDaoImpl -->
+    <bean id="factoryObjectUserDao" class="com.zhengsongjun.factory.MyBeanFactory2" />
+    <bean id="factoryGetBean" factory-bean="factoryObjectUserDao" factory-method="getUserDao" />
+
 
     <!--配置UserServiceImpl-->
     <bean id="userService" class="com.zhengsongjun.spring.impl.UserServiceImpl">
