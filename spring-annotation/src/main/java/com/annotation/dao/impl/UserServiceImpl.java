@@ -1,27 +1,27 @@
 package com.annotation.dao.impl;
 
+import com.annotation.dao.UserDao;
 import com.annotation.dao.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
 @Component("userService")
 @Scope("singleton")
 @Lazy(true)
 public class UserServiceImpl implements UserService {
-    public UserServiceImpl() {
-        System.out.println("无参构造器被执行");
-    }
-    @PostConstruct
-    public void init(){
-        System.out.println("执行init方法");
-    }
+   @Autowired
+   @Qualifier
+   private UserDao userDao;
 
-    @PreDestroy
-    public void destroy(){
-        System.out.println("执行销毁方法");
-    }
+   @Resource(name="userDao")
+   public void xxx(){
+
+   }
 }
