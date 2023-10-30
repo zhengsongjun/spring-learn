@@ -15,6 +15,7 @@
 
     <!--配置目标类-->
     <bean id="userService" class="org.example.dao.impl.UserDaoImpl" />
+
     <!--配置的通知类-->
     <bean id="advice" class="org.example.advice.MyAdvice" />
     <aop:config>
@@ -37,6 +38,10 @@
     </aop:aspect>
 </aop:config>
 
-
-
+    <bean id="service" class="org.example.dao.impl.ServiceImpl" />
+    <bean id="advisor" class="org.example.advisor.BeforeAndReturnAfter" />
+    <aop:config>
+        <aop:pointcut id="serviceObject" expression="execution(void org.example.dao.impl.ServiceImpl.beforeShow())"/>
+        <aop:advisor advice-ref="advisor" pointcut-ref="serviceObject"/>
+    </aop:config>
 </beans>
