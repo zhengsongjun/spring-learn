@@ -22,21 +22,21 @@
         <aop:aspect ref="advice">
             <aop:before method="advice" pointcut-ref="myPoint" />
         </aop:aspect>
-    </aop:config>
-    <aop:config>
-        <aop:pointcut id="beforeShow" expression="execution(void org.example.dao.impl.UserDaoImpl.beforeShow())"/>
-        <aop:pointcut id="afterRunningShow" expression="execution(void org.example.dao.impl.UserDaoImpl.afterRunningShow())"/>
-        <aop:pointcut id="aroundShow" expression="execution(void org.example.dao.impl.UserDaoImpl.aroundShow())"/>
-        <aop:pointcut id="throwingShow" expression="execution(void org.example.dao.impl.UserDaoImpl.throwingShow())"/>
-        <aop:pointcut id="afterShow" expression="execution(void org.example.dao.impl.UserDaoImpl.afterShow())"/>
-        <aop:aspect ref="advice">
-            <aop:before method="beforeAdvice" pointcut-ref="beforeShow" />
-            <aop:after-returning method="afterRunningAdvice" pointcut-ref="afterRunningShow" />
-            <aop:around method="aroundAdvice" pointcut-ref="aroundShow" />
-            <aop:after-throwing method="throwingAdvice" pointcut-ref="throwingShow" />
-            <aop:around method="after" pointcut-ref="afterShow" />
-        </aop:aspect>
-    </aop:config>
+    </aop:config>    <aop:config>
+    <aop:pointcut id="beforeShow" expression="execution(void org.example.dao.impl.UserDaoImpl.beforeShow())"/>
+    <aop:pointcut id="afterRunningShow" expression="execution(void org.example.dao.impl.UserDaoImpl.afterRunningShow())"/>
+    <aop:pointcut id="aroundShow" expression="execution(void org.example.dao.impl.UserDaoImpl.aroundShow())"/>
+    <aop:pointcut id="throwingShow" expression="execution(void org.example.dao.impl.UserDaoImpl.throwingShow())"/>
+    <aop:pointcut id="afterShow" expression="execution(void org.example.dao.impl.UserDaoImpl.afterShow())"/>
+    <aop:aspect ref="advice">
+        <aop:before method="beforeAdvice" pointcut-ref="beforeShow" />
+        <aop:after-returning method="afterRunningAdvice" pointcut-ref="afterRunningShow" />
+        <aop:around method="aroundAdvice" pointcut-ref="aroundShow" />
+        <aop:after-throwing method="throwingAdvice" pointcut-ref="throwingShow" throwing="e" />
+        <aop:around method="after" pointcut-ref="afterShow" />
+    </aop:aspect>
+</aop:config>
+
 
 
 </beans>

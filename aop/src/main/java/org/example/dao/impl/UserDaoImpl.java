@@ -2,6 +2,8 @@ package org.example.dao.impl;
 
 import org.example.dao.UserDao;
 
+import javax.sql.rowset.Joinable;
+
 public class UserDaoImpl implements UserDao {
     @Override
     public void show() {
@@ -30,6 +32,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void throwingShow() {
+        int i = 1/0;
         System.out.println("user错误通知");
     }
 

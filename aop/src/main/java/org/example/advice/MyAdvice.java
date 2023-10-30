@@ -1,13 +1,20 @@
 package org.example.advice;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+
+import javax.sql.rowset.Joinable;
 
 public class MyAdvice {
     public void advice(){
         System.out.println("advice通知一下");
     }
 
-    public void beforeAdvice(){
+    public void beforeAdvice(JoinPoint joinPoint){
+        Class<? extends JoinPoint> aClass = joinPoint.getClass();
+        Object target = joinPoint.getTarget();
+        System.out.println(aClass);
+        System.out.println(target);
         System.out.println("advice前置通知");
     }
 
@@ -22,7 +29,8 @@ public class MyAdvice {
         return res;
     }
 
-    public void throwingAdvice(){
+    public void throwingAdvice(Throwable e){
+        System.out.println(e);
         System.out.println("advice异常通知");
     }
 

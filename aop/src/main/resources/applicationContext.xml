@@ -32,7 +32,7 @@
         <aop:before method="beforeAdvice" pointcut-ref="beforeShow" />
         <aop:after-returning method="afterRunningAdvice" pointcut-ref="afterRunningShow" />
         <aop:around method="aroundAdvice" pointcut-ref="aroundShow" />
-        <aop:after-throwing method="throwingAdvice" pointcut-ref="throwingShow" />
+        <aop:after-throwing method="throwingAdvice" pointcut-ref="throwingShow" throwing="e" />
         <aop:around method="after" pointcut-ref="afterShow" />
     </aop:aspect>
 </aop:config>
