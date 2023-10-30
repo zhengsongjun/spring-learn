@@ -9,5 +9,10 @@ public class TestAspect {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserDao userService = (UserDao) applicationContext.getBean("userService");
         userService.show();
+        userService.beforeShow();
+        userService.afterRunningShow();
+        userService.aroundShow();
+        userService.throwingShow();
+        userService.afterShow();
     }
 }
