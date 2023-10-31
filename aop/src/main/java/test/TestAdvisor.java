@@ -10,6 +10,5 @@ public class TestAdvisor {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         Service service = (Service) applicationContext.getBean("service");
         service.beforeShow();
-        service.afterRunningShow();
     }
 }
