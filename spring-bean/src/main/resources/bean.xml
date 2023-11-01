@@ -23,8 +23,8 @@
 
 
     <!-- processor -->
-    <bean class="com.zhengsongjun.process.MyBeanFactoryPostProcessor" />
-    <bean class="com.zhengsongjun.process.BeanFactoryRegisterPostProcessorImpl" />
-
-
+<!--    <bean class="com.zhengsongjun.process.MyBeanFactoryPostProcessor" />-->
+<!--    <bean class="com.zhengsongjun.process.BeanFactoryRegisterPostProcessorImpl" />-->
+<!--        <bean class="com.zhengsongjun.process.MyOtherBeanDefinition" />-->
+        <bean class="com.zhengsongjun.process.MyBeanPostProcessor"/>
 </beans>
