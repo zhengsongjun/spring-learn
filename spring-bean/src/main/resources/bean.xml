@@ -24,6 +24,7 @@
 
     <!-- processor -->
     <bean class="com.zhengsongjun.process.MyBeanFactoryPostProcessor" />
+    <bean class="com.zhengsongjun.process.BeanFactoryRegisterPostProcessorImpl" />
 
 
 </beans>

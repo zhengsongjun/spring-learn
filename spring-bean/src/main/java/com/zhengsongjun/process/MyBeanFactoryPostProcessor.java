@@ -14,6 +14,7 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 //        BeanDefinition userDao = configurableListableBeanFactory.getBeanDefinition("userDao");
 //        userDao.setBeanClassName("java.lang.String");
         //  注入对象
+        System.out.println("方法");
         BeanDefinition beanDefinition =  new RootBeanDefinition();
         beanDefinition.setBeanClassName("com.zhengsongjun.spring.impl.PersonImpl");
         DefaultListableBeanFactory defaultListableBeanFactory = (DefaultListableBeanFactory) configurableListableBeanFactory;
