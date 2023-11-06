@@ -11,7 +11,6 @@ public class PersonImpl implements Person, InitializingBean {
     }
 
     public void init(){
-
         this.setName("init setName");
         System.out.println("init");
     }
@@ -19,5 +18,10 @@ public class PersonImpl implements Person, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         System.out.println("afterPropertiesSet被执行");
+    }
+
+//    @Override
+    public void hello() {
+        System.out.println("hello");
     }
 }

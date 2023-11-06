@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-        <bean id="person" class="com.zhengsongjun.spring.impl.PersonImpl" init-method="init"/>
+        <bean id="person" class="com.zhengsongjun.spring.impl.PersonImpl" init-method="init" >
+               <property name="name" value="test"/>
+        </bean>
 
 <!--    <bean id="userDao"  class="com.zhengsongjun.spring.impl.UserDaoImpl">-->
 <!--        <constructor-arg name="name" value="tom">-->
@@ -28,4 +30,5 @@
 <!--    <bean class="com.zhengsongjun.process.BeanFactoryRegisterPostProcessorImpl" />-->
 <!--        <bean class="com.zhengsongjun.process.MyOtherBeanDefinition" />-->
         <bean class="com.zhengsongjun.process.MyBeanPostProcessor"/>
+<!--        <bean class="com.zhengsongjun.process.TimeLogPostProcessor" />-->
 </beans>
