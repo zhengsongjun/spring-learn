@@ -9,6 +9,7 @@
         <module name="spring-annotation" />
         <module name="spring-bean" />
         <module name="aop" />
+        <module name="spring-mvc" />
         <module name="transaction" />
       </profile>
     </annotationProcessing>
