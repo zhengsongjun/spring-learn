@@ -27,6 +27,7 @@ public class Param {
 
     @GetMapping("params3") //http://localhost:8080/params3?howdy=zq&howdy=wq&howdy=ss
     public String getParamToArray(String[] howdy){
+        System.out.println("景来了");
         for (String s : howdy) {
             System.out.println(s);  // zq wq ss
         }
